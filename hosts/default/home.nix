@@ -8,6 +8,7 @@
 
   home.packages = with pkgs; [
     # Add packages if needed
+
   ];
 
   home.file = {
@@ -28,5 +29,19 @@
       "info" = "neofetch";
     };
   };
+
+    # Include Plasma Manager here
+  imports = [
+    inputs.plasma-manager.homeManagerModules.plasma-manager
+  ];
+  programs.plasma = {
+    enable = true;
+
+     workspace = {
+      clickItemTo = "open"; # If you liked the click-to-open default from plasma 5
+      lookAndFeel = "org.kde.breezedark.desktop";
+      };
+    };
+
 }
 

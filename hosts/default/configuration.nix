@@ -106,6 +106,7 @@
     wget
     neofetch
     home-manager
+    kitty
   ];
 
  nix.gc = {
