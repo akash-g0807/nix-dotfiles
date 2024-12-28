@@ -1,6 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
+
   home.username = "akashg";
   home.homeDirectory = "/home/akashg";
 
@@ -8,7 +9,16 @@
 
   home.packages = with pkgs; [
     # Add packages if needed
+  
+    # development
+    rustc
+    git
+   
+    # music
+    spotify
 
+    # communication
+    discord-canary
   ];
 
   home.file = {
@@ -17,6 +27,7 @@
 
   home.sessionVariables = {
     # Add environment variables if needed
+    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
   };
 
   programs.home-manager.enable = true;

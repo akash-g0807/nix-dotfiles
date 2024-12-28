@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs,  ... }:
+{ config, pkgs, inputs, systemSettings, userSettings, ... }:
 
 {
   imports =
@@ -148,9 +148,11 @@
 
   home-manager = {
   # also pass inputs to home-manager modules
-  extraSpecialArgs = {inherit inputs;};
+  extraSpecialArgs = {inherit inputs; inherit systemSettings; inherit userSettings;};
   users = {
     akashg  = import ./home.nix;
     };
-  }; 
+  };
+
+  home-manager.useGlobalPkgs = true; 
 }
