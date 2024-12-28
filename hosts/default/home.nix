@@ -20,15 +20,13 @@
 
   programs.home-manager.enable = true;
 
-  # Include Plasma Manager here
-  imports = [
-    inputs.plasma-manager.homeManagerModules.plasma-manager
-  ];
-
-  programs.plasma = {
+  programs.bash = {
     enable = true;
-
+    shellAliases = {
+      ll = "ls -la";
+      ".." = "cd ..";
+      "info" = "neofetch";
+    };
   };
-
 }
 
