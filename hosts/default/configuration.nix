@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
+      ../../system/app/flatpak.nix
     ];
 
   # Bootloader.
@@ -107,6 +108,7 @@
     neofetch
     home-manager
     kitty
+    flatpak
   ];
 
  nix.gc = {

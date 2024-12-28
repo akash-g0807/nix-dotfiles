@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, userSettings, ... }:
 
 {
 
@@ -41,8 +41,11 @@
     };
   };
 
-    # Include Plasma Manager here
+    # Imports
   imports = [
+
+    ../../user/app/git/git.nix # My git config
+    ../../user/app/flatpak/flatpak.nix # Flatpak
     inputs.plasma-manager.homeManagerModules.plasma-manager
   ];
   programs.plasma = {
