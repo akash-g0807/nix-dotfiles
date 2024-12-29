@@ -39,7 +39,8 @@
 
     ../../user/app/git/git.nix # My git config
     ../../user/app/flatpak/flatpak.nix # Flatpak
-     ../../user/shell/sh.nix # My zsh and bash config
+    ../../user/shell/sh.nix # My zsh and bash config
+    ../../user/shell/cli-collections.nix # Useful CLI apps
     inputs.plasma-manager.homeManagerModules.plasma-manager
   ];
   programs.plasma = {
