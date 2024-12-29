@@ -76,7 +76,7 @@
           modules = [
             (./. + "/hosts" + ("/" + systemSettings.profile) + "/home.nix")
             inputs.plasma-manager.homeManagerModules.plasma-manager
-            inputs.nix-flatpak.homeManagerModules.nix-flatpak
+            #inputs.nix-flatpak.homeManagerModules.nix-flatpak
           ];
         };
       };

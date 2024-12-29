@@ -8,11 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      #inputs.home-manager.nixosModules.default
+      inputs.home-manager.nixosModules.default
       ../../system/app/flatpak.nix
       ../../system/desktop/fonts.nix
       ../../system/hardware/bluetooth.nix
       #inputs.nix-flatpak.nixosModules.nix-flatpak
+      #inputs.nix-flatpak.homeManagerModules.nix-flatpak
     ];
 
   # Bootloader.
