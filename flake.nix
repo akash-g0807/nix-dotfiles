@@ -16,6 +16,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+   
+    nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena/nix-flatpak/?ref=<tag> to pin releases.
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -57,6 +59,7 @@
             inherit userSettings;  inherit pkgs-stable;};
         modules = [
           (./. + "/hosts" + ("/" + systemSettings.profile) + "/configuration.nix")
+          inputs.nix-flatpak.nixosModules.nix-flatpak
           inputs.home-manager.nixosModules.default
         ];
 
@@ -73,6 +76,7 @@
           modules = [
             (./. + "/hosts" + ("/" + systemSettings.profile) + "/home.nix")
             inputs.plasma-manager.homeManagerModules.plasma-manager
+            inputs.nix-flatpak.homeManagerModules.nix-flatpak
           ];
         };
       };

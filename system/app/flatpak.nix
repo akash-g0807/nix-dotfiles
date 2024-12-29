@@ -1,4 +1,4 @@
-{pkgs, ... }:
+{config, pkgs, inputs, ... }:
 
 {
   # Need some flatpaks
@@ -12,6 +12,12 @@
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     '';
   };
+
+    services.flatpak.packages = [
+    { appId = "org.freecad.FreeCAD"; origin = "flathub";  }
+    "org.libreoffice.LibreOffice"
+  ];
+   
 }
 
 

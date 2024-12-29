@@ -46,6 +46,8 @@
     ../../user/app/nvim/nvim.nix # My doom neovim config
     inputs.plasma-manager.homeManagerModules.plasma-manager
   ];
+
+  
   programs.plasma = {
     enable = true;
 

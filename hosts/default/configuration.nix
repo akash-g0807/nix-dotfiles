@@ -8,10 +8,11 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
+      #inputs.home-manager.nixosModules.default
       ../../system/app/flatpak.nix
       ../../system/desktop/fonts.nix
       ../../system/hardware/bluetooth.nix
+      #inputs.nix-flatpak.nixosModules.nix-flatpak
     ];
 
   # Bootloader.
@@ -149,6 +150,10 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
   
+
+  services.flatpak.packages = [
+    { appId = "com.github.tchx84.Flatseal"; origin = "flathub";  }
+  ]; 
 
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
