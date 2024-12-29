@@ -28,24 +28,23 @@ in
     [ $TERM = "dumb" ] && unsetopt zle && PS1='$ '
     bindkey '^P' history-beginning-search-backward
     bindkey '^N' history-beginning-search-forward
+    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
   
-
-  zplug = {
+   zplug = {
     enable = true;
-    plugins = [
-      { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
-      { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; } # Installations with additional options. For the list of options, please refer to Zplug README.
-    ];
+    plugins = [{
+      name = "romkatv/powerlevel10k";
+      tags = [ "as:theme" "depth:1" ];
+    }];
+  };
   };
  
- # oh-my-zsh = {
- #   enable = true;
- #   plugins = [ "git" ];
- #   theme = "robbyrussell";
- # };
-  };
-  
+ home.file.".p10k.zsh" = {
+   source = ./.p10k.zsh;
+   executable = true;
+ };
+ 
 
   programs.bash = {
     enable = true;

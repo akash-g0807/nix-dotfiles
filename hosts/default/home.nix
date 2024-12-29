@@ -21,6 +21,7 @@
     # communication
     discord-canary
   ];
+  
 
   home.file = {
     # Add dotfile management if needed
