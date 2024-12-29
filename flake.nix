@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+   
+    nixpkgs-stable.url = "nixpkgs/nixos-24.05";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -39,12 +41,20 @@
         profile = "default"; # select a profile defined from my profiles directory
       };
 
+      pkgs-stable = import inputs.nixpkgs-stable {
+        system = systemSettings.system;
+        config = {
+          allowUnfree = true;
+          allowUnfreePredicate = (_: true);
+        };
+      };
+
   
     in {
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; inherit systemSettings;
-            inherit userSettings;};
+            inherit userSettings;  inherit pkgs-stable;};
         modules = [
           (./. + "/hosts" + ("/" + systemSettings.profile) + "/configuration.nix")
           inputs.home-manager.nixosModules.default
@@ -59,7 +69,7 @@
             config.allowUnfree = true; # Enable unfree for home-manager too
           };
           extraSpecialArgs = { inherit inputs; inherit systemSettings;
-            inherit userSettings;};
+            inherit userSettings;  inherit pkgs-stable;};
           modules = [
             (./. + "/hosts" + ("/" + systemSettings.profile) + "/home.nix")
             inputs.plasma-manager.homeManagerModules.plasma-manager

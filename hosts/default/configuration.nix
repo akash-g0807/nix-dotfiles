@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, systemSettings, userSettings, ... }:
+{ config, pkgs, inputs, systemSettings, userSettings, pkgs-stable, ... }:
 
 {
   imports =
@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
       ../../system/app/flatpak.nix
+      ../../system/desktop/fonts.nix
     ];
 
   # Bootloader.
@@ -159,7 +160,7 @@
 
   home-manager = {
   # also pass inputs to home-manager modules
-  extraSpecialArgs = {inherit inputs; inherit systemSettings; inherit userSettings;};
+  extraSpecialArgs = {inherit inputs; inherit systemSettings; inherit userSettings;  inherit pkgs-stable;};
   users = {
     akashg  = import ./home.nix;
     };
