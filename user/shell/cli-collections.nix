@@ -30,8 +30,8 @@
     #      nmcli n on
     #  fi
    # '')
-    vim 
-    neovim
+   # vim 
+   # neovim
   ];
 }
 

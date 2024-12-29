@@ -110,6 +110,7 @@
     kitty
     flatpak
     zsh
+    vscode
   ];
 
  nix.gc = {
