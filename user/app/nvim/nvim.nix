@@ -4,6 +4,9 @@
   home.packages = with pkgs; [
     neovim    # enable if don't want to be managed by home-manager
     ripgrep
+    nodejs     # to install language servers
+   python312Packages.python-lsp-server  # pylsp language server
+   ccls # C ad cpp language server
   ];
 
 

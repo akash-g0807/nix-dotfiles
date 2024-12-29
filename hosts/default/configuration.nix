@@ -115,6 +115,7 @@
     flatpak
     zsh
     vscode
+    lua-language-server
   ];
 
  nix.gc = {

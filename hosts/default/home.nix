@@ -39,6 +39,7 @@
   imports = [
    
     inputs.nix-flatpak.homeManagerModules.nix-flatpak
+     ../../user/lang/python/python.nix # C and C++ tools
     ../../user/lang/cc/cc.nix # C and C++ tools
     ../../user/app/git/git.nix # My git config
     ../../user/app/flatpak/flatpak.nix # Flatpak
