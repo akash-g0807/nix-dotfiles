@@ -16,7 +16,7 @@
     services.flatpak.packages = [
     { appId = "org.freecad.FreeCAD"; origin = "flathub";  }
     "org.libreoffice.LibreOffice"
-    "com.google.Chrome"
+    #"com.google.Chrome"
   ];
    
 }
