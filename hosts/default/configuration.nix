@@ -109,6 +109,7 @@
     home-manager
     kitty
     flatpak
+    zsh
   ];
 
  nix.gc = {
@@ -145,6 +146,13 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
   
+
+  environment.shells = with pkgs; [ zsh ];
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
+
+  #fonts.fontDir.enable = true;
+ 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
 

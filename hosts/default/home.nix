@@ -13,6 +13,7 @@
     # development
     rustc
     git
+    zsh
    
     # music
     spotify
@@ -32,20 +33,12 @@
 
   programs.home-manager.enable = true;
 
-  programs.bash = {
-    enable = true;
-    shellAliases = {
-      ll = "ls -la";
-      ".." = "cd ..";
-      "info" = "neofetch";
-    };
-  };
-
     # Imports
   imports = [
 
     ../../user/app/git/git.nix # My git config
     ../../user/app/flatpak/flatpak.nix # Flatpak
+     ../../user/shell/sh.nix # My zsh and bash config
     inputs.plasma-manager.homeManagerModules.plasma-manager
   ];
   programs.plasma = {
