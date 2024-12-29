@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     neovim    # enable if don't want to be managed by home-manager
+    ripgrep
   ];
 
 

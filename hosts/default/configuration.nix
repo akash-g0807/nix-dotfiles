@@ -11,6 +11,7 @@
       inputs.home-manager.nixosModules.default
       ../../system/app/flatpak.nix
       ../../system/desktop/fonts.nix
+      ../../system/hardware/bluetooth.nix
     ];
 
   # Bootloader.

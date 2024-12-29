@@ -38,6 +38,7 @@
     # Imports
   imports = [
 
+    ../../user/lang/cc/cc.nix # C and C++ tools
     ../../user/app/git/git.nix # My git config
     ../../user/app/flatpak/flatpak.nix # Flatpak
     ../../user/shell/sh.nix # My zsh and bash config
