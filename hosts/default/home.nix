@@ -30,6 +30,7 @@
   home.sessionVariables = {
     # Add environment variables if needed
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+    TERM = "kitty";
   };
 
   programs.home-manager.enable = true;
@@ -52,6 +53,7 @@
       lookAndFeel = "org.kde.breezedark.desktop";
       };
     };
+
 
 }
 
