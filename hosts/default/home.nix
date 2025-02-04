@@ -45,7 +45,6 @@
     ../../user/app/flatpak/flatpak.nix # Flatpak
     ../../user/shell/sh.nix # My zsh and bash config
     ../../user/shell/cli-collections.nix # Useful CLI apps
-    ../../user/app/nvim/nvim.nix # My doom neovim config
     inputs.plasma-manager.homeManagerModules.plasma-manager
   ];
 

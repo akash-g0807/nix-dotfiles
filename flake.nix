@@ -18,6 +18,9 @@
     };
    
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena/nix-flatpak/?ref=<tag> to pin releases.
+
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -61,6 +64,7 @@
           (./. + "/hosts" + ("/" + systemSettings.profile) + "/configuration.nix")
           inputs.nix-flatpak.nixosModules.nix-flatpak
           inputs.home-manager.nixosModules.default
+          inputs.disko.nixosModules.disko
         ];
 
       };
