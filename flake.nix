@@ -43,7 +43,7 @@
       systemSettings = {
         system = "x86_64-linux"; # system arch
         hostname = "akash-linux"; # hostname
-        profile = "default"; # select a profile defined from my profiles directory
+        profile = "gnome"; # select a profile defined from my profiles directory
       };
 
       pkgs-stable = import inputs.nixpkgs-stable {
@@ -79,7 +79,7 @@
             inherit userSettings;  inherit pkgs-stable;};
           modules = [
             (./. + "/hosts" + ("/" + systemSettings.profile) + "/home.nix")
-            inputs.plasma-manager.homeManagerModules.plasma-manager
+            #inputs.plasma-manager.homeManagerModules.plasma-manager
             #inputs.nix-flatpak.homeManagerModules.nix-flatpak
           ];
         };
