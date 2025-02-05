@@ -21,6 +21,8 @@
     # communication
     discord-canary
     dconf
+
+   obsidian
   ];
   
 
@@ -78,6 +80,9 @@
           # you can easily get its UUID by accessing its extensionUuid
           # field (look at the following example).
           pkgs.gnomeExtensions.blur-my-shell.extensionUuid
+          pkgs.gnomeExtensions.appindicator.extensionUuid
+          pkgs.gnomeExtensions.dash-to-dock.extensionUuid
+
           # Alternatively, you can manually pass UUID as a string.  
           # ...
         ];

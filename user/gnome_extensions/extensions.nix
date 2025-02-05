@@ -4,6 +4,7 @@
     # Command Line
     blur-my-shell
     appindicator
-    pop-shell  
+    pop-shell
+    dash-to-dock 
   ];
 }
