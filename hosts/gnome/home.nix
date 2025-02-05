@@ -50,6 +50,7 @@
     ../../user/app/flatpak/flatpak.nix # Flatpak
     ../../user/shell/sh.nix # My zsh and bash config
     ../../user/shell/cli-collections.nix # Useful CLI apps
+    ../../user/gnome_extensions/extensions.nix #gnome extensions
   ];
 
   dconf = {
@@ -61,10 +62,26 @@
 
    "org/gnome/mutter" = {
       experimental-features = [ "scale-monitor-framebuffer" "xwayland-native-scaling"];  # Enables fractional scaling
+       edge-tiling = true;  # Enables edge tiling (dragging windows to screen edges)
     };
-   "org/gnome/mutter" = {
+   
+
+  "org/gnome/mutter" = {
       "enable-native-xwayland" = true;
     };
+
+    "org/gnome/shell" = {
+        disable-user-extensions = false;
+        enabled-extensions = [
+          # Put UUIDs of extensions that you want to enable here.
+          # If the extension you want to enable is packaged in nixpkgs,
+          # you can easily get its UUID by accessing its extensionUuid
+          # field (look at the following example).
+          pkgs.gnomeExtensions.blur-my-shell.extensionUuid
+          # Alternatively, you can manually pass UUID as a string.  
+          # ...
+        ];
+   };
    };
 
  };
