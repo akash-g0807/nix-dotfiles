@@ -53,6 +53,7 @@
     ../../user/shell/sh.nix # My zsh and bash config
     ../../user/shell/cli-collections.nix # Useful CLI apps
     ../../user/gnome_extensions/extensions.nix #gnome extensions
+    ../../user/app/vscode/vscode.nix #vscode config
   ];
 
   dconf = {

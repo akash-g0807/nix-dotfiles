@@ -172,7 +172,7 @@
     kitty
     flatpak
     zsh
-    vscode
+    #vscode
     lua-language-server
     adwaita-icon-theme
     gnome-themes-extra
@@ -224,7 +224,8 @@
   #fonts.fontDir.enable = true;
  
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+ 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1" ;
 
   home-manager = {
   # also pass inputs to home-manager modules
