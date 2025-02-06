@@ -14,6 +14,7 @@ programs.vscode = {
     twxs.cmake
     ms-vscode.cpptools
    ms-python.python
+    james-yu.latex-workshop
   ];
 };
 
