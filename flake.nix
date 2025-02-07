@@ -19,6 +19,8 @@
    
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena/nix-flatpak/?ref=<tag> to pin releases.
 
+    minegrub-theme.url = "github:Lxtharia/minegrub-theme";
+
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -64,6 +66,7 @@
           (./. + "/hosts" + ("/" + systemSettings.profile) + "/configuration.nix")
           inputs.nix-flatpak.nixosModules.nix-flatpak
           inputs.home-manager.nixosModules.default
+          inputs.minegrub-theme.nixosModules.default
           inputs.disko.nixosModules.disko
         ];
 

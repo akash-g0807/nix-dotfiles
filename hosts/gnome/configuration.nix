@@ -24,6 +24,17 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.efiInstallAsRemovable = true;
+  
+  boot.loader.grub = {
+    minegrub-theme = {
+      enable = true;
+      splash = "100% Flakes!";
+      background = "background_options/1.8  - [Classic Minecraft].png";
+      boot-options-count = 4;
+    };
+    # ...
+  };
+
 
   networking.hostName = "akash-linux"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
