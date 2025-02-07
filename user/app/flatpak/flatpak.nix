@@ -11,6 +11,8 @@
   services.flatpak.packages = [ { appId = "org.videolan.VLC"; origin = "flathub";  } 
   "com.rtosta.zapzap"
   "com.spotify.Client"
+  "org.libreoffice.LibreOffice"
+  "org.gtk.Gtk3theme.Adwaita-dark"
   ];
   #services.flatpak.update.onActivation = true;
 }

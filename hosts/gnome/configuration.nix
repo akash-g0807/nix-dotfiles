@@ -153,6 +153,7 @@
     hicolor-icon-theme 
     dconf-editor
     gnome-tweaks
+    xdg-desktop-portal-gtk
     ];
   };
 
