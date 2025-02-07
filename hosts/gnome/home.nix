@@ -35,7 +35,7 @@
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     TERM = "kitty";
     NIXOS_OZONE_WL = "1";
-    QT_QPA_PLATFORM = "wayland";
+    QT_QPA_PLATFORM = "wayland;xcb";  # Use Wayland, fallback to XCB
     SDL_VIDEODRIVER = "wayland";
     _JAVA_AWT_WM_NONREPARENTING = "1";
   };
