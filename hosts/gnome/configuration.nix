@@ -177,7 +177,10 @@
     lua-language-server
     adwaita-icon-theme
     gnome-themes-extra
+    fprintd
   ];
+
+  services.fprintd.enable = true;
 
  nix.gc = {
     automatic = true;
