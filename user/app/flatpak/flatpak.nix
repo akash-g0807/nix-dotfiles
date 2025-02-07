@@ -10,6 +10,7 @@
   services.flatpak.enable = true;
   services.flatpak.packages = [ { appId = "org.videolan.VLC"; origin = "flathub";  } 
   "com.rtosta.zapzap"
+  "com.spotify.Client"
   ];
   #services.flatpak.update.onActivation = true;
 }

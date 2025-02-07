@@ -16,7 +16,7 @@
     zsh
    
     # music
-    spotify
+    #spotify
 
     # communication
     discord-canary
@@ -58,9 +58,15 @@
 
   dconf = {
      enable = true;
-     settings = { "org/gnome/desktop/interface" = {
+     settings = { 
+     "org/gnome/desktop/interface" = {
       icon-theme = "Adwaita";  # Use any installed theme like 'Papirus', 'Breeze', etc.
       cursor-theme = "Adwaita";  # Set the cursor theme declaratively
+      gtk-theme = "Adwaita-dark";
+    };
+  
+   "org/gnome/desktop/wm/preferences" = {
+      theme = "Adwaita-dark";
     };
 
    "org/gnome/mutter" = {
