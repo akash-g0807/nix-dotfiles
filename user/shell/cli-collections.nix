@@ -32,6 +32,7 @@
    # '')
    # vim 
    # neovim
+   gap-full
   ];
 }
 
