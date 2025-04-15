@@ -165,6 +165,9 @@
     dconf-editor
     gnome-tweaks
     xdg-desktop-portal-gtk
+
+    # Java for apps
+    openjdk
     ];
   };
 
@@ -189,6 +192,11 @@
     adwaita-icon-theme
     gnome-themes-extra
     fprintd
+
+    # Java for apps
+    openjdk
+
+    ns-usbloader
   ];
 
   services.fprintd.enable = true;
@@ -249,6 +257,27 @@
     _JAVA_AWT_WM_NONREPARENTING = "1";
 
   };
+
+  
+  services.udev.packages = [
+    (pkgs.writeTextFile {
+      name = "99-NS.rules";
+      text = ''
+        SUBSYSTEM=="usb", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="3000", MODE="0666"
+      '';
+      destination = "/etc/udev/rules.d/99-NS.rules";
+    })
+
+    (pkgs.writeTextFile {
+      name = "99-NS-RCM.rules";
+      text = ''
+        SUBSYSTEM=="usb", ATTRS{idVendor}=="0955", ATTRS{idProduct}=="7321", MODE="0666"
+      '';
+      destination = "/etc/udev/rules.d/99-NS-RCM.rules";
+    })
+  ];
+
+
 
   home-manager = {
   # also pass inputs to home-manager modules
