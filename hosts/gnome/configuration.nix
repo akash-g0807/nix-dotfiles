@@ -12,6 +12,7 @@
       ../../system/app/flatpak.nix
       ../../system/desktop/fonts.nix
       ../../system/hardware/bluetooth.nix
+      ../../system/app/transmission.nix
       ./disko-config.nix
       #inputs.nix-flatpak.nixosModules.nix-flatpak
       #inputs.nix-flatpak.homeManagerModules.nix-flatpak
@@ -69,8 +70,8 @@
   services.xserver.enable = true;
 
 
-   services.xserver.displayManager.gdm.enable = true;
-   services.xserver.desktopManager.gnome.enable = true;
+   services.displayManager.gdm.enable = true;
+   services.desktopManager.gnome.enable = true;
      services.gnome.gnome-keyring.enable = true;
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -197,6 +198,8 @@
     openjdk
 
     ns-usbloader
+    losslesscut-bin
+    transmission_4-gtk
   ];
 
   services.fprintd.enable = true;
