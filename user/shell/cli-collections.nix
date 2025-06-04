@@ -33,6 +33,7 @@
    # vim 
    # neovim
    gap-full
+   unrar
   ];
 }
 
