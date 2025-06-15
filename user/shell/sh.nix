@@ -12,6 +12,7 @@ let
     #fetch = "disfetch";
     #gitfetch = "onefetch";
     #"," = "comma";
+    hakunekod = "hakuneko --disable-gpu --no-sandbox";
   };
 in
 {

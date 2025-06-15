@@ -34,6 +34,7 @@
    # neovim
    gap-full
    unrar
+   ffmpeg
   ];
 }
 

@@ -24,8 +24,25 @@
 
    obsidian
    youtube-music
-  ];
+
+   # anime and manga
   
+  hakuneko
+  (writeShellScriptBin "hakuneko-fixed" ''
+    exec ${hakuneko}/bin/hakuneko --disable-gpu --no-sandbox
+  '')
+  ];
+ 
+   home.file.".local/share/applications/hakuneko-desktop.desktop".text = ''
+  [Desktop Entry]
+  Name=HakuNeko
+  Comment=Manga downloader with crash fix
+  Exec=hakuneko --disable-gpu --no-sandbox
+  Icon=hakuneko-desktop
+  Terminal=false
+  Type=Application
+  Categories=Utility;
+'';
 
   home.file = {
     # Add dotfile management if needed
