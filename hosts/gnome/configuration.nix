@@ -14,6 +14,7 @@
       ../../system/hardware/bluetooth.nix
       ../../system/app/transmission.nix
       ../../system/app/jellyfin.nix
+      #../../system/app/emacs.nix
       ./disko-config.nix
       #inputs.nix-flatpak.nixosModules.nix-flatpak
       #inputs.nix-flatpak.homeManagerModules.nix-flatpak
@@ -201,6 +202,7 @@
     ns-usbloader
     losslesscut-bin
     transmission_4-gtk
+    nix-prefetch-git
   ];
 
   services.fprintd.enable = true;

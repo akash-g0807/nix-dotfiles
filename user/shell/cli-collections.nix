@@ -35,6 +35,11 @@
    gap-full
    unrar
    ffmpeg
+   git-secrets
+   git-extras
+   ccls
+   graphviz
+   texlab
   ];
 }
 

@@ -74,6 +74,7 @@
     ../../user/shell/cli-collections.nix # Useful CLI apps
     ../../user/gnome_extensions/extensions.nix #gnome extensions
     ../../user/app/vscode/vscode.nix #vscode config
+    ../../user/app/emacs/emacs.nix
   ];
 
   dconf = {
