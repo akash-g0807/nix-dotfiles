@@ -31,6 +31,8 @@
   (writeShellScriptBin "hakuneko-fixed" ''
     exec ${hakuneko}/bin/hakuneko --disable-gpu --no-sandbox
   '')
+
+  popcorntime
   ];
  
    home.file.".local/share/applications/hakuneko-desktop.desktop".text = ''

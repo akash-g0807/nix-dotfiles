@@ -13,6 +13,7 @@
       ../../system/desktop/fonts.nix
       ../../system/hardware/bluetooth.nix
       ../../system/app/transmission.nix
+      ../../system/app/jellyfin.nix
       ./disko-config.nix
       #inputs.nix-flatpak.nixosModules.nix-flatpak
       #inputs.nix-flatpak.homeManagerModules.nix-flatpak
