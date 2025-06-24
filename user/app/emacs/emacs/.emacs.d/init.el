@@ -1256,6 +1256,27 @@ Other buffer group by `centaur-tabs-get-group-name' with project name."
 
 ;; VISUAL FILL MODE
 
+(defun efs/org-mode-visual-fill ()
+  (setq visual-fill-column-width 150
+        visual-fill-column-center-text t)
+  (visual-fill-column-mode 1))
+
+(use-package visual-fill-column
+  :hook (org-mode . efs/org-mode-visual-fill))
+
+;; Disable line numbers for some modes
+(dolist (mode '(org-mode-hook
+                term-mode-hook
+                shell-mode-hook
+                treemacs-mode-hook
+                eshell-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
+(defun line-space-increase ()
+  (setq line-spacing 6))
+
+(add-hook 'org-mode-hook 'line-space-increase)
+
 (use-package pdf-tools
   :defer t
   :commands (pdf-loader-install)

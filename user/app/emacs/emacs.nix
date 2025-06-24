@@ -68,6 +68,7 @@
       auctex
       rustic
       pdf-tools
+      visual-fill-column
       # add more here
     ];
   };
