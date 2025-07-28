@@ -73,6 +73,10 @@
     ];
   };
 
+  services.emacs = {
+  enable = true;
+  defaultEditor = true;
+};
 
   home.file.".emacs.d" = {
     source = ./emacs/.emacs.d;

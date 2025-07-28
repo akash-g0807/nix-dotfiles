@@ -11,6 +11,7 @@
       inputs.home-manager.nixosModules.default
       ../../system/app/flatpak.nix
       ../../system/desktop/fonts.nix
+      ../../system/desktop/gaming.nix
       ../../system/hardware/bluetooth.nix
       ../../system/app/transmission.nix
       ../../system/app/jellyfin.nix
@@ -263,6 +264,8 @@
     QT_QPA_PLATFORM = "wayland;xcb";  # Use Wayland, fallback to XCB
     SDL_VIDEODRIVER = "wayland";
     _JAVA_AWT_WM_NONREPARENTING = "1";
+    NIX_LD = "/run/current-system/sw/share/nix-ld/lib/ld.so";
+    NIX_LD_LIBRARY_PATH = "/run/current-system/sw/share/nix-ld/lib";
 
   };
 

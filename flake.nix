@@ -6,6 +6,8 @@
    
     nixpkgs-stable.url = "nixpkgs/nixos-24.05";
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -68,6 +70,7 @@
           inputs.home-manager.nixosModules.default
           inputs.minegrub-theme.nixosModules.default
           inputs.disko.nixosModules.disko
+          inputs.nixos-hardware.nixosModules.framework-12th-gen-intel
         ];
 
       };

@@ -33,6 +33,9 @@
   '')
 
   popcorntime
+  filezilla
+
+  ventoy-full-gtk
   ];
  
    home.file.".local/share/applications/hakuneko-desktop.desktop".text = ''
